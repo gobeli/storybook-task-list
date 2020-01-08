@@ -1,6 +1,9 @@
 <template>
-  <div class="tasks">
+  <div class="">
     <Task v-for="task in tasks" :key="task.id" :task="task" />
+    <div v-if="!tasks || tasks.length <= 0">
+      No Tasks yet
+    </div>
   </div>
 </template>
 
@@ -16,7 +19,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>template 
