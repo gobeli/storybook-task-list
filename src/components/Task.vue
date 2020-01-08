@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white shadow-md flex items-center p-4 m-2">
-    <input type="checkbox" name="done" class="mr-4">
+  <div class="flex items-center border-b border-gray-200 p-4">
+    <input type="checkbox" :checked="task.checked" name="done" class="mr-4">
     {{task.text}}
   </div>
 </template>
@@ -12,7 +12,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

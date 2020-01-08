@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="bg-white shadow-md">
     <Task v-for="task in tasks" :key="task.id" :task="task" />
-    <div v-if="!tasks || tasks.length <= 0">
-      No Tasks yet
+    <div class="flex items-center justify-center h-64" v-if="!tasks || tasks.length <= 0">
+      <h2 class="text-xl">No Tasks yet</h2>
     </div>
   </div>
 </template>
