@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import { installCommon } from './components/common';
+
+installCommon();
+
 Vue.config.productionTip = false
 
 new Vue({

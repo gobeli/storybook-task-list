@@ -1,4 +1,5 @@
-import Vue from 'vue';
+import { action } from '@storybook/addon-actions';
+
 import Task from './Task.vue';
 
 const mockTask = {
@@ -7,9 +8,13 @@ const mockTask = {
   checked: false
 }
 
+
 const defaultSettings = {
   components: { Task },
-  template: '<task :task="task"></task>'
+  methods: {
+    handleCheckedChange: action('checkedChange')
+  },
+  template: '<task @checkedChange="handleCheckedChange" :task="task"></task>'
 }
 
 export default { title: 'Task' };
