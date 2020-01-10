@@ -1,5 +1,6 @@
-import TaskList from './TaskList.vue';
-import { action } from '@storybook/addon-actions';
+import TaskList from '../TaskList.vue'
+
+import { action } from '@storybook/addon-actions'
 
 const tasks = [
   { id: 1, text: 'blabla', checked: false },
@@ -15,12 +16,12 @@ const defaultSettings = {
   template: '<task-list :tasks="tasks" @taskUpdate="handleTaskUpdate" @taskDelete="handleTaskDelete"></task-list>'
 }
 
-export default { title: 'Task List' };
+export default { title: 'Task List' }
 
 export const Default = () => ({
   ...defaultSettings,
   data: () => ({ tasks: tasks }),
-});
+})
 
 export const NoContent = () => ({
   ...defaultSettings,
