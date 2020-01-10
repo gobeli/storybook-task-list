@@ -12,9 +12,10 @@ const mockTask = {
 const defaultSettings = {
   components: { Task },
   methods: {
-    handleCheckedChange: action('checkedChange')
+    handleCheckedChange: action('checkedChange'),
+    handleTaskDelete: action('taskDelete')
   },
-  template: '<task @checkedChange="handleCheckedChange" :task="task"></task>'
+  template: '<task @checkedChange="handleCheckedChange" @taskDelete="handleTaskDelete" :task="task"></task>'
 }
 
 export default { title: 'Task' };

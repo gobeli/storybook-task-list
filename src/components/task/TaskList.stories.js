@@ -9,9 +9,10 @@ const tasks = [
 const defaultSettings = {
   components: { TaskList },
   methods: {
-    handleTaskUpdate: action('taskUpdate')
+    handleTaskUpdate: action('taskUpdate'),
+    handleTaskDelete: action('taskDelete')
   },
-  template: '<task-list :tasks="tasks" @taskUpdate="handleTaskUpdate"></task-list>'
+  template: '<task-list :tasks="tasks" @taskUpdate="handleTaskUpdate" @taskDelete="handleTaskDelete"></task-list>'
 }
 
 export default { title: 'Task List' };

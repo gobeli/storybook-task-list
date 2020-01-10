@@ -1,8 +1,11 @@
 <template>
   <div class="bg-white rounded shadow">
-    <Task v-for="task in tasks" @checkedChange="handleCheckedChange(task)" :key="task.id" :task="task" />
+    <Task v-for="task in tasks" 
+      @checkedChange="handleCheckedChange(task, $event)" @taskDelete="handleTaskDelete" 
+      :key="task.id" :task="task" 
+    />
     <div class="flex items-center justify-center" v-if="!tasks || tasks.length <= 0">
-      <h2 class="text-xl my-12">No Tasks yet</h2>
+      <h2 class="text-xl my-12">No tasks yet</h2>
     </div>
   </div>
 </template>
@@ -15,10 +18,11 @@ export default {
     Task
   },
   methods: {
-    handleCheckedChange(task) {
-      return function(checked) {
-        this.$emit('taskUpdate', { ...task, checked })
-      }
+    handleCheckedChange(task, checked) {
+      this.$emit('taskUpdate', { ...task, checked })
+    },
+    handleTaskDelete(event) {
+      this.$emit('taskDelete', event)
     }
   },
   props: {
