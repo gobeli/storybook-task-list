@@ -13,6 +13,12 @@ Developing UI components in isolation
 
 ----
 
+![UI](./assets/UI_components.png)
+
+<!-- .slide: class="master02" -->
+
+----
+
 ## CDD / Atomic Design
 ![UI](./assets/atomic-design.jpg)
 

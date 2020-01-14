@@ -1,5 +1,7 @@
 <template>
-  <div class="flex items-center justify-between border-b border-gray-200 p-4">
+  <div class="flex items-center justify-between border-gray-200 p-4"
+      :class="{ 'border-4 border-red-300': $showBorders , 'border-b': !$showBorders }"
+  >
     <sb-checkbox :checked="task.checked" @input="handleInput" name="done">
       <span :class="{'line-through': task.checked}">
         {{task.text}}

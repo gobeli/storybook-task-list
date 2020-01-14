@@ -1,5 +1,5 @@
 <template>
-  <label class="custom-label flex items-center">
+  <label class="custom-label flex items-center" :class="{ 'border-4 border-red-300': $showBorders }">
     <div class="bg-white border w-5 h-5 p-1 flex justify-center items-center">
       <input type="checkbox" class="hidden" @input="handleInput"
         :name="name"

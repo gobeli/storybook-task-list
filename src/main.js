@@ -6,6 +6,7 @@ import { installCommon } from './components/common';
 installCommon();
 
 Vue.config.productionTip = false
+Vue.prototype.$showBorders = true
 
 new Vue({
   render: h => h(App),

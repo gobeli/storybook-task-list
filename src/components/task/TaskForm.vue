@@ -1,5 +1,5 @@
 <template>
-  <form @submit="onSubmit">
+  <form @submit="onSubmit" :class="{ 'border-4 border-red-300': $showBorders }">
     <sb-input v-model="text"></sb-input>
   </form>
 </template>
