@@ -13,17 +13,18 @@ Developing UI components in isolation
 
 ----
 
-![UI](./assets/UI_components.png)
-
-<!-- .slide: class="master02" -->
-
-----
-
 ## CDD / Atomic Design
 ![UI](./assets/atomic-design.jpg)
 
 <!-- Bottom Up -->
 <!-- .slide: class="master02" -->
+
+----
+
+![UI](./assets/UI_components.png)
+
+<!-- .slide: class="master02" -->
+
 
 ----
 
@@ -39,9 +40,15 @@ Developing UI components in isolation
 # Storybook
 - Playground
 - Explorer
-<!-- - Unabhängiges Entwickeln / Testen -->
+- Unabhängiges Entwickeln / Testen
 - Dokumentation
 
+<!-- .slide: class="master02" -->
+
+----
+
+
+![UI](./assets/storybook.png)
 <!-- .slide: class="master02" -->
 
 ----
@@ -63,11 +70,24 @@ Developing UI components in isolation
 ---
 
 # Story erstellen
+- Pro Komponente ein "Stories" File
 <!-- .slide: class="master03" -->
 
 ----
 
-## HTML / CSS
+## Altes Format
+
+```js
+storiesOf('Button', module)
+  .add('Default', () => 
+    `<button class="btn">Default Button</button>`
+  )
+```
+<!-- .slide: class="master03" -->
+
+----
+
+## Component Story Format
 ```js
 export default { title: 'Button' };
 
@@ -86,30 +106,33 @@ export default { title: 'Task' };
 export const Default = () => ({
   components: { Task },
   template: '<task :task="task"></task>',
-  data: () => ({ task: mockTask }),
+  data: () => ({ task: dummyTask }),
 });
 ```
-
 <!-- .slide: class="master03" -->
 
 ---
 
-# Slide 3
-
-Lorem _ipsum_.
+# Demo
 
 <!-- .slide: class="master04" -->
 
 ---
 
-# Third Topic
+# Testing
 
-<!-- .slide: class="master04 intro" -->
+<!-- .slide: class="master04" -->
+
+---
+
+# Addons
+
+<!-- .slide: class="master04" -->
 
 ---
 
 # Links
-
+https://storybook.js.org/
 https://bradfrost.com/blog/post/atomic-web-design/
 https://addyosmani.com/first/
 https://www.learnstorybook.com/
