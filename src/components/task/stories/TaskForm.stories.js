@@ -10,7 +10,7 @@ const defaultSettings = {
   template: '<task-form @taskAdd="handleTaskAdd"></task-form>'
 }
 
-export default { title: 'organisms/Task Form' }
+export default { title: 'molecules/Task Form' }
 
 export const Default = () => ({
   ...defaultSettings,
