@@ -1,9 +1,10 @@
 <template>
-  <div class="flex items-center border-b border-gray-200 p-4">
-    <input type="checkbox" :checked="task.checked" @change="handleChange" name="done" class="mr-4">
-    <div class="flex-1" :class="{'line-through': task.checked}">
-      {{task.text}}
-    </div>
+  <div class="flex items-center justify-between border-b border-gray-200 p-4">
+    <sb-checkbox :checked="task.checked" @input="handleInput" name="done">
+      <span :class="{'line-through': task.checked}">
+        {{task.text}}
+      </span>
+    </sb-checkbox>
     <a href="#" @click="handleDelete" class="ml-4">
       &#10006;
     </a>
@@ -13,8 +14,8 @@
 <script>
 export default {
   methods: {
-    handleChange(event) {
-      this.$emit('checkedChange', event.target.checked)
+    handleInput(event) {
+      this.$emit('checkedChange', event)
     },
     handleDelete(event) {
       event.preventDefault()

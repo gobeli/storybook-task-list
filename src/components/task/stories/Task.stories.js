@@ -8,7 +8,6 @@ const mockTask = {
   checked: false
 }
 
-
 const defaultSettings = {
   components: { Task },
   methods: {
@@ -18,7 +17,7 @@ const defaultSettings = {
   template: '<task @checkedChange="handleCheckedChange" @taskDelete="handleTaskDelete" :task="task"></task>'
 }
 
-export default { title: 'Task' }
+export default { title: 'molecules/Task' }
 
 export const Default = () => ({
   ...defaultSettings,

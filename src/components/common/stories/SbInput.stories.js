@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions'
 
 import SbInput from '../SbInput.vue'
 
-export default { title: 'Input' }
+export default { title: 'atoms/Input' }
 
 const defaultSettings = {
   components: { SbInput },

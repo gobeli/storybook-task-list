@@ -13,6 +13,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault()
       this.$emit('taskAdd', this.text)
+      this.text = ''
     }
   }
 }
