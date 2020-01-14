@@ -5,9 +5,35 @@ Developing UI components in isolation
 
 ---
 
-# Use Cases
-- Playground 
-- Unabhängiges Entwickeln / Testen
+# UI
+
+![UI](./assets/UI.png)
+
+<!-- .slide: class="master02" -->
+
+----
+
+## CDD / Atomic Design
+![UI](./assets/atomic-design.jpg)
+
+<!-- Bottom Up -->
+<!-- .slide: class="master02" -->
+
+----
+
+## Unabhängige Komponenten
+
+![UI](./assets/Task.png)
+![UI](./assets/Input.png)
+
+<!-- .slide: class="master02" -->
+
+---
+
+# Storybook
+- Playground
+- Explorer
+<!-- - Unabhängiges Entwickeln / Testen -->
 - Dokumentation
 
 <!-- .slide: class="master02" -->
@@ -32,14 +58,21 @@ Developing UI components in isolation
 
 # Story erstellen
 <!-- .slide: class="master03" -->
+
+----
+
+## HTML / CSS
 ```js
 export default { title: 'Button' };
 
-export const Default = () => 
+export const Default = () =>
   `<button class="btn">Default Button</button>`;
 ```
+<!-- .slide: class="master03" -->
 
 ----
+
+## Framework z.B Vue
 
 ```js
 export default { title: 'Task' };
@@ -69,8 +102,11 @@ Lorem _ipsum_.
 
 ---
 
-# Slide 4
+# Links
 
-Lorem _ipsum_.
+https://bradfrost.com/blog/post/atomic-web-design/
+https://addyosmani.com/first/
+https://www.learnstorybook.com/
+
 
 <!-- .slide: class="master04" -->
